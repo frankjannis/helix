@@ -1,0 +1,41 @@
+theme = "github_dark_high_contrast"
+
+[keys.insert]
+C-c = "normal_mode"
+
+[keys.normal]
+C-r = ":reload"
+C-g = [":write-all", ":new", ":insert-output lazygit", ":buffer-close!", ":redraw", ":reload-all"]
+
+"ä" = "switch_to_lowercase"
+"Ä" = "switch_to_uppercase"
+"C-ä" = "switch_case"
+
+"ö" = "collapse_selection"
+"Ö" = "flip_selections"
+
+"ü" = { d = "goto_next_diag", D = "goto_last_diag",  f = "goto_next_function", t = "goto_next_class", a = "goto_next_parameter", c = "goto_next_comment", T = "goto_next_test", p = "goto_next_paragraph", g = "goto_next_change", G = "goto_last_change" }
+"Ü" = { d = "goto_prev_diag", D = "goto_first_diag", f = "goto_prev_function", t = "goto_prev_class", a = "goto_prev_parameter", c = "goto_prev_comment", T = "goto_prev_test", p = "goto_prev_paragraph", g = "goto_prev_change", G = "goto_first_change" }
+
+[editor]
+scrolloff = 15
+line-number = "relative"
+default-line-ending = "lf"
+auto-format = false
+
+[editor.cursor-shape]
+insert = "bar"
+
+[editor.lsp]
+display-inlay-hints = true
+
+[editor.statusline]
+left = ["mode", "register", "spinner", "file-name", "read-only-indicator", "file-modification-indicator"]
+right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+
+[editor.whitespace.render]
+space = "all"
+tab = "all"
+nbsp = "none"
+nnbsp = "none"
+newline = "none"
