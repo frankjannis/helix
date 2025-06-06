@@ -1,7 +1,7 @@
 theme = "github_dark_high_contrast"
 
 [keys.insert]
-C-c = "normal_mode"
+# C-c = "normal_mode"
 
 [keys.normal]
 C-r = ":reload"
@@ -16,7 +16,6 @@ C-g = [":write-all", ":new", ":insert-output lazygit", ":buffer-close!", ":redra
 
 [editor]
 scrolloff = 15
-line-number = "relative"
 default-line-ending = "lf"
 auto-format = false
 
