@@ -5,7 +5,12 @@ theme = "github_dark_high_contrast"
 
 [keys.normal]
 C-r = ":reload"
-C-g = [":write-all", ":new", ":insert-output lazygit", ":buffer-close!", ":redraw", ":reload-all"]
+C-g = [
+  # ":write-all",
+  ":sh kitty @ launch --no-response --cwd=current --type=overlay --copy-env lazygit",
+  # ":redraw",
+  # ":reload-all"
+]
 
 "ä" = "switch_to_lowercase"
 "Ä" = "switch_to_uppercase"
